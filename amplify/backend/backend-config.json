@@ -1,0 +1,118 @@
+{
+  "api": {
+    "GatewayAPI": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2025-01-02T23:00:33.246Z",
+                "apiKeyExpirationDays": 365,
+                "description": "GatewayAPI Key"
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "AWS_IAM"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "amplifyreact28476df38": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_storage_RichGatewayDB_arn": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RichGatewayDB"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RichGatewayDB_partitionKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RichGatewayDB"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RichGatewayDB_partitionKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RichGatewayDB"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RichGatewayDB_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RichGatewayDB"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RichGatewayDB_sortKeyName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RichGatewayDB"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RichGatewayDB_sortKeyType": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RichGatewayDB"
+        }
+      ]
+    },
+    "AMPLIFY_storage_RichGatewayDB_tableName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "RichGatewayDB"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "RichGatewayDB": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB",
+      "serviceType": "imported"
+    }
+  }
+}
